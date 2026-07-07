@@ -83,7 +83,7 @@ class _ContactSectionState extends State<ContactSection> {
                   context: context,
                   opacity: 0.05,
                   borderRadius: 16,
-                  borderColor: accentColor.withOpacity(0.1),
+                  borderColor: accentColor.withAlpha(26),
                 ),
                 child: Column(
                   children: [
@@ -134,7 +134,7 @@ class _ContactSectionState extends State<ContactSection> {
                       boxShadow: _isHoveredButton && isDark
                           ? [
                               BoxShadow(
-                                color: accentColor.withOpacity(0.3),
+                                color: accentColor.withAlpha(77),
                                 blurRadius: 15,
                                 offset: const Offset(0, 4),
                               )
@@ -174,19 +174,19 @@ class _ContactSectionState extends State<ContactSection> {
               const SizedBox(height: 80),
               
               // Footer signature
-              Divider(color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withOpacity(0.1)),
+              Divider(color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withAlpha(26)),
               const SizedBox(height: 24),
               Text(
                 "Designed & Built by Devendrasinh Zala",
                 style: textTheme.labelSmall?.copyWith(
-                  color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withOpacity(0.6),
+                  color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withAlpha(153),
                 ),
               ),
               const SizedBox(height: 8),
               Text(
                 "© 2026 • Flutter Web Application",
                 style: textTheme.labelSmall?.copyWith(
-                  color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withOpacity(0.4),
+                  color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withAlpha(102),
                   fontSize: 10,
                 ),
               ),

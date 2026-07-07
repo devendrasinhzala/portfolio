@@ -75,7 +75,7 @@ class AboutSection extends StatelessWidget {
         Expanded(
           child: Container(
             height: 1,
-            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.3),
+            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(77),
           ),
         ),
       ],
@@ -155,7 +155,7 @@ class AboutSection extends StatelessWidget {
         context: context,
         opacity: 0.08,
         borderRadius: 16,
-        borderColor: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.1),
+        borderColor: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(26),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

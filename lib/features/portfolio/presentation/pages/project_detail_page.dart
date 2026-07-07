@@ -39,7 +39,6 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
     final isDark = ref.watch(themeProvider) == ThemeMode.dark;
     final textTheme = Theme.of(context).textTheme;
     final accentColor = isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo;
-    final size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: AppBar(
@@ -77,7 +76,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
               height: 400,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: accentColor.withOpacity(0.04),
+                color: accentColor.withAlpha(10),
               ),
             ),
           ),
@@ -156,10 +155,10 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
             return Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: accentColor.withOpacity(0.08),
+                color: accentColor.withAlpha(20),
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: accentColor.withOpacity(0.15),
+                  color: accentColor.withAlpha(38),
                 ),
               ),
               child: Text(
@@ -229,7 +228,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
               ],
             ),
           );
-        }).toList(),
+        }),
         const SizedBox(height: 48),
         
         // Actions Links
@@ -250,7 +249,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
                     boxShadow: _isHoveredGit && isDark
                         ? [
                             BoxShadow(
-                              color: accentColor.withOpacity(0.3),
+                              color: accentColor.withAlpha(77),
                               blurRadius: 15,
                               offset: const Offset(0, 4),
                             )
@@ -264,7 +263,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
                       backgroundColor: isDark ? AppTheme.darkCardBg : AppTheme.lightAccentIndigo,
                       foregroundColor: Colors.white,
                       side: BorderSide(
-                        color: accentColor.withOpacity(0.3),
+                        color: accentColor.withAlpha(77),
                         width: 1.5,
                       ),
                       shape: RoundedRectangleBorder(
@@ -334,12 +333,12 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
                 color: isDark ? AppTheme.darkBg : Colors.white,
                 borderRadius: BorderRadius.circular(40),
                 border: Border.all(
-                  color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withOpacity(0.3),
+                  color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withAlpha(77),
                   width: 8,
                 ),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(isDark ? 0.4 : 0.1),
+                    color: Colors.black.withAlpha(isDark ? 102 : 26),
                     blurRadius: 30,
                     offset: const Offset(0, 15),
                   ),
@@ -353,7 +352,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
                     width: 70,
                     height: 18,
                     decoration: BoxDecoration(
-                      color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withOpacity(0.2),
+                      color: (isDark ? AppTheme.darkTextSecondary : AppTheme.lightTextSecondary).withAlpha(51),
                       borderRadius: BorderRadius.circular(10),
                     ),
                     margin: const EdgeInsets.only(bottom: 16.0),
@@ -432,13 +431,13 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(
-                      color: isActive ? accentColor : Colors.grey.withOpacity(0.3),
+                      color: isActive ? accentColor : Colors.grey.withAlpha(77),
                       width: isActive ? 2.5 : 1.5,
                     ),
                     boxShadow: isActive
                         ? [
                             BoxShadow(
-                              color: accentColor.withOpacity(0.25),
+                              color: accentColor.withAlpha(64),
                               blurRadius: 8,
                               spreadRadius: 1,
                             )
@@ -506,10 +505,10 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
               // Dummy summary card
               Container(
                 padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(color: Colors.white.withOpacity(0.12), borderRadius: BorderRadius.circular(12)),
+                decoration: BoxDecoration(color: Colors.white.withAlpha(31), borderRadius: BorderRadius.circular(12)),
                 child: Row(
                   children: [
-                    Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(color: Colors.white.withOpacity(0.2), borderRadius: BorderRadius.circular(8)), child: const Icon(Icons.show_chart, color: Colors.white, size: 20)),
+                    Container(padding: const EdgeInsets.all(8), decoration: BoxDecoration(color: Colors.white.withAlpha(51), borderRadius: BorderRadius.circular(8)), child: const Icon(Icons.show_chart, color: Colors.white, size: 20)),
                     const SizedBox(width: 12),
                     Expanded(
                       child: Column(
@@ -529,7 +528,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(color: (isDark ? AppTheme.darkCardBg : Colors.white).withOpacity(0.95), borderRadius: BorderRadius.circular(16)),
+                  decoration: BoxDecoration(color: (isDark ? AppTheme.darkCardBg : Colors.white).withAlpha(242), borderRadius: BorderRadius.circular(16)),
                   child: Column(
                     children: [
                       _buildMockScreenListItem(Icons.cloud_done, "Sync Status", "Completed", isDark),
@@ -656,7 +655,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
           child: LinearProgressIndicator(
             value: val,
             minHeight: 5,
-            backgroundColor: accentColor.withOpacity(0.1),
+            backgroundColor: accentColor.withAlpha(26),
             valueColor: AlwaysStoppedAnimation<Color>(accentColor),
           ),
         ),
@@ -672,7 +671,7 @@ class _ProjectDetailPageState extends ConsumerState<ProjectDetailPage> {
         Switch(
           value: active,
           onChanged: (_) {},
-          activeColor: accentColor,
+          activeThumbColor: accentColor,
         ),
       ],
     );

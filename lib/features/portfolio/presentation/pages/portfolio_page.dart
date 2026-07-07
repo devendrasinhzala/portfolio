@@ -76,12 +76,12 @@ class _PortfolioPageState extends ConsumerState<PortfolioPage> {
         duration: const Duration(milliseconds: 200),
         decoration: BoxDecoration(
           color: _isScrolled
-              ? (isDark ? AppTheme.darkBg : AppTheme.lightBg).withOpacity(0.85)
+              ? (isDark ? AppTheme.darkBg : AppTheme.lightBg).withAlpha(217)
               : Colors.transparent,
           border: Border(
             bottom: BorderSide(
               color: _isScrolled 
-                  ? primaryColor.withOpacity(0.15) 
+                  ? primaryColor.withAlpha(38) 
                   : Colors.transparent,
               width: 1.5,
             ),
@@ -214,7 +214,7 @@ class _PortfolioPageState extends ConsumerState<PortfolioPage> {
               height: 500,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: primaryColor.withOpacity(0.04),
+                color: primaryColor.withAlpha(10),
               ),
             ),
           ),
@@ -226,7 +226,7 @@ class _PortfolioPageState extends ConsumerState<PortfolioPage> {
               height: 600,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: (isDark ? AppTheme.darkAccentIndigo : AppTheme.lightAccentTeal).withOpacity(0.03),
+                color: (isDark ? AppTheme.darkAccentIndigo : AppTheme.lightAccentTeal).withAlpha(8),
               ),
             ),
           ),

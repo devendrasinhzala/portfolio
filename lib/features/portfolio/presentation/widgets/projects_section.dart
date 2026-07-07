@@ -75,7 +75,7 @@ class ProjectsSection extends StatelessWidget {
         Expanded(
           child: Container(
             height: 1,
-            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.3),
+            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(77),
           ),
         ),
       ],
@@ -120,12 +120,12 @@ class _ProjectCardState extends State<ProjectCard> {
         child: AnimatedContainer(
         duration: const Duration(milliseconds: 250),
         curve: Curves.easeInOut,
-        transform: _isHovered ? (Matrix4.identity()..translate(0, -10, 0)) : Matrix4.identity(),
+        transform: _isHovered ? Matrix4.translationValues(0.0, -10.0, 0.0) : Matrix4.identity(),
         decoration: AppTheme.glassDecoration(
           context: context,
           opacity: _isHovered ? 0.12 : 0.06,
           borderRadius: 16,
-          borderColor: _isHovered ? accentColor.withOpacity(0.4) : accentColor.withOpacity(0.1),
+          borderColor: _isHovered ? accentColor.withAlpha(102) : accentColor.withAlpha(26),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -152,7 +152,7 @@ class _ProjectCardState extends State<ProjectCard> {
                     child: Icon(
                       Icons.code,
                       size: 140,
-                      color: Colors.white.withOpacity(0.1),
+                      color: Colors.white.withAlpha(26),
                     ),
                   ),
                   Positioned(
@@ -205,10 +205,10 @@ class _ProjectCardState extends State<ProjectCard> {
                         return Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                           decoration: BoxDecoration(
-                            color: accentColor.withOpacity(0.08),
+                            color: accentColor.withAlpha(20),
                             borderRadius: BorderRadius.circular(20),
                             border: Border.all(
-                              color: accentColor.withOpacity(0.15),
+                              color: accentColor.withAlpha(38),
                             ),
                           ),
                           child: Text(

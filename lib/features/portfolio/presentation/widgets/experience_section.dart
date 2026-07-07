@@ -68,7 +68,7 @@ class ExperienceSection extends StatelessWidget {
         Expanded(
           child: Container(
             height: 1,
-            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.3),
+            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(77),
           ),
         ),
       ],
@@ -96,7 +96,7 @@ class ExperienceSection extends StatelessWidget {
               ),
               boxShadow: [
                 BoxShadow(
-                  color: accentColor.withOpacity(0.3),
+                  color: accentColor.withAlpha(77),
                   blurRadius: 10,
                   spreadRadius: 1,
                 )
@@ -112,7 +112,7 @@ class ExperienceSection extends StatelessWidget {
                   gradient: LinearGradient(
                     colors: [
                       accentColor,
-                      accentColor.withOpacity(0.05),
+                      accentColor.withAlpha(13),
                     ],
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
@@ -197,7 +197,7 @@ class _ExperienceCardState extends State<ExperienceCard> {
           context: context,
           opacity: _isHovered ? 0.10 : 0.05,
           borderRadius: 16,
-          borderColor: _isHovered ? accentColor.withOpacity(0.3) : accentColor.withOpacity(0.1),
+          borderColor: _isHovered ? accentColor.withAlpha(77) : accentColor.withAlpha(26),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,

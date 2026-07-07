@@ -96,7 +96,7 @@ class SkillsSection extends StatelessWidget {
         Expanded(
           child: Container(
             height: 1,
-            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.3),
+            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(77),
           ),
         ),
       ],
@@ -114,7 +114,7 @@ class SkillsSection extends StatelessWidget {
         context: context,
         opacity: 0.08,
         borderRadius: 12,
-        borderColor: accentColor.withOpacity(0.1),
+        borderColor: accentColor.withAlpha(26),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -125,7 +125,7 @@ class SkillsSection extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
-                  color: accentColor.withOpacity(0.1),
+                  color: accentColor.withAlpha(26),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Icon(
@@ -161,7 +161,7 @@ class SkillsSection extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
             child: LinearProgressIndicator(
               value: skill.level,
-              backgroundColor: isDark ? Colors.white.withOpacity(0.08) : Colors.black.withOpacity(0.05),
+              backgroundColor: isDark ? Colors.white.withAlpha(20) : Colors.black.withAlpha(13),
               valueColor: AlwaysStoppedAnimation<Color>(accentColor),
               minHeight: 6,
             ),

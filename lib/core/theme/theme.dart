@@ -42,7 +42,7 @@ class AppTheme {
   }) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     return BoxDecoration(
-      color: (isDark ? darkCardBg : lightCardBg).withOpacity(opacity),
+      color: (isDark ? darkCardBg : lightCardBg).withAlpha((opacity * 255).round()),
       borderRadius: BorderRadius.circular(borderRadius),
       border: Border.all(
         color: borderColor,
@@ -51,8 +51,8 @@ class AppTheme {
       boxShadow: [
         BoxShadow(
           color: isDark 
-              ? Colors.black.withOpacity(0.3) 
-              : Colors.grey.withOpacity(0.1),
+              ? Colors.black.withAlpha(77) 
+              : Colors.grey.withAlpha(26),
           blurRadius: 20,
           offset: const Offset(0, 10),
         ),
@@ -118,7 +118,7 @@ class AppTheme {
         ),
       ),
       iconTheme: const IconThemeData(color: darkTextPrimary),
-      dividerColor: darkTextSecondary.withOpacity(0.2),
+      dividerColor: darkTextSecondary.withAlpha(51),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -185,7 +185,7 @@ class AppTheme {
         ),
       ),
       iconTheme: const IconThemeData(color: lightTextPrimary),
-      dividerColor: lightTextSecondary.withOpacity(0.2),
+      dividerColor: lightTextSecondary.withAlpha(51),
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.transparent,
         elevation: 0,

@@ -91,10 +91,10 @@ class _HeroSectionState extends State<HeroSection> {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
           decoration: BoxDecoration(
-            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withOpacity(0.1),
+            color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withAlpha(26),
             borderRadius: BorderRadius.circular(20),
             border: Border.all(
-              color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withOpacity(0.2),
+              color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withAlpha(51),
             ),
           ),
           child: Text(
@@ -177,7 +177,7 @@ class _HeroSectionState extends State<HeroSection> {
                     boxShadow: _isHoveredView && isDark
                         ? [
                             BoxShadow(
-                              color: AppTheme.darkAccentTeal.withOpacity(0.4),
+                              color: AppTheme.darkAccentTeal.withAlpha(102),
                               blurRadius: 20,
                               offset: const Offset(0, 5),
                             )
@@ -250,7 +250,7 @@ class _HeroSectionState extends State<HeroSection> {
             color: (isDark ? AppTheme.darkCardBg : AppTheme.lightCardBg),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.15),
+              color: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(38),
             ),
           ),
           child: FaIcon(
@@ -294,7 +294,7 @@ class _HeroSectionState extends State<HeroSection> {
                   shape: BoxShape.circle,
                   gradient: RadialGradient(
                     colors: [
-                      (isDark ? AppTheme.darkAccentIndigo : AppTheme.lightAccentIndigo).withOpacity(0.18),
+                      (isDark ? AppTheme.darkAccentIndigo : AppTheme.lightAccentIndigo).withAlpha(46),
                       Colors.transparent,
                     ],
                   ),
@@ -312,7 +312,7 @@ class _HeroSectionState extends State<HeroSection> {
                     shape: BoxShape.circle,
                     gradient: RadialGradient(
                       colors: [
-                        (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withOpacity(0.12),
+                        (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withAlpha(31),
                         Colors.transparent,
                       ],
                     ),
@@ -337,7 +337,7 @@ class _HeroSectionState extends State<HeroSection> {
                     context: context,
                     opacity: 0.15,
                     borderRadius: 110,
-                    borderColor: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.2),
+                    borderColor: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(51),
                   ),
                   child: ClipOval(
                     child: ShaderMask(
@@ -345,7 +345,7 @@ class _HeroSectionState extends State<HeroSection> {
                         return LinearGradient(
                           begin: Alignment.topCenter,
                           end: Alignment.bottomCenter,
-                          colors: [Colors.black, Colors.black.withOpacity(0.1)],
+                          colors: [Colors.black, Colors.black.withAlpha(26)],
                         ).createShader(rect);
                       },
                       blendMode: BlendMode.dstIn,
@@ -353,8 +353,8 @@ class _HeroSectionState extends State<HeroSection> {
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
                             colors: [
-                              (isDark ? AppTheme.darkAccentIndigo : AppTheme.lightAccentIndigo).withOpacity(0.4),
-                              (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withOpacity(0.3),
+                              (isDark ? AppTheme.darkAccentIndigo : AppTheme.lightAccentIndigo).withAlpha(102),
+                              (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentTeal).withAlpha(77),
                             ],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
@@ -407,7 +407,7 @@ class _HeroSectionState extends State<HeroSection> {
               context: context,
               opacity: 0.8,
               borderRadius: 12,
-              borderColor: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withOpacity(0.3),
+              borderColor: (isDark ? AppTheme.darkAccentTeal : AppTheme.lightAccentIndigo).withAlpha(77),
             ),
             child: Center(
               child: Icon(
